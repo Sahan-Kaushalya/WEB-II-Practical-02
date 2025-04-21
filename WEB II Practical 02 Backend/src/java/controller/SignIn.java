@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@MultipartConfig
+//@MultipartConfig
 @WebServlet(name = "SignIn", urlPatterns = {"/SignIn"})
 public class SignIn extends HttpServlet {
 
@@ -20,8 +20,8 @@ public class SignIn extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-         response.addHeader("Access-Control-Allow-Origin", "*");
-         
+        response.setHeader("Access-Control-Allow-Origin", "*");
+
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
@@ -38,7 +38,7 @@ public class SignIn extends HttpServlet {
                 ResultSet rs = c.createStatement().executeQuery("SELECT * FROM `user` WHERE `email`='" + email + "' AND `password`='" + password + "'");
 
                 if (rs.next()) {
-                    response.getWriter().write("success");                   
+                    response.getWriter().write("success");
                 } else {
                     response.getWriter().write("Invalid Login Credentials !");
                 }
