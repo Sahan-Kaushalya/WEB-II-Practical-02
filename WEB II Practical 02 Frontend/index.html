@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+    <body class="bg-dark ">
+        <div class="container mt-5">
+            <div class="card bg-success bg-gradient shadow-lg text-dark rounded-top-3 rounded-bottom-0">
+                <div class="text-center mt-1">
+                    <img src="https://avatar.iran.liara.run/public" alt="Logo" width="80" height="80" class="rounded-circle mb-2">
+                </div>
+                <h2 class="text-center text-white text-uppercase mt-1 mb-1"></i>User Sign Up</h2>
+            </div>
+
+            <div class="card-body bg-light shadow-lg rounded-bottom-3 mb-3 p-3">        
+
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <label for="fname" class="form-label"><i class="bi bi-person-fill me-3"></i>Frist Name</label>
+                            <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter your Frist Name" required/>
+                        </div>
+
+                        <div class="col-6">
+                            <label for="lname" class="form-label"><i class="bi bi-person-fill me-3"></i>Last Name</label>
+                            <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter your Last Name" required/>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label class="form-label"><i class="bi bi-gender-ambiguous me-3"></i>Gender</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required/>
+                                <label class="form-check-label" for="male"><i class="bi bi-gender-male me-1"></i>Male</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required/>    
+                                <label class="form-check-label" for="female"><i class="bi bi-gender-female me-1"></i>Female</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <label for="mobile" class="form-label"><i class="bi bi-telephone-fill me-2"></i>Mobile Number</label>
+                            <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Enter your Mobile Number" required/>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <label class="form-label"><i class="bi bi-geo-alt-fill me-2"></i>City</label>
+                            <select class="form-select" name="city" required>
+                                <option value="">Select your City</option>
+                                <option value="Colombo">Colombo</option>
+                                <option value="Gampaha">Gampaha</option>
+                                <option value="Kurunegala">Kurunegala</option>
+                                <option value="Kandy">Kandy</option>
+                                <option value="Matara">Matara</option>
+                                <option value="Bandarawela">Bandarawela</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <label for="email" class="form-label"><i class="bi bi-envelope-fill me-2"></i>Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email" required/>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <label for="password" class="form-label"><i class="bi bi-lock-fill me-2"></i>Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your Password" required/>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="d-grid">
+                            <button onclick="signUp();" class="btn btn-success"><i class="bi bi-person-plus-fill me-2"></i>Sign Up</button>
+                        </div>    
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12 text-center">
+                            <p>Already have an account? <a href="signin.html" class="text-primary">Sign In</a></p>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
