@@ -11,15 +11,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@MultipartConfig
+//@MultipartConfig
 @WebServlet(name = "SignUp", urlPatterns = {"/SignUp"})
 public class SignUp extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
-       response.addHeader("Access-Control-Allow-Origin", "*");
+
+        response.setHeader("Access-Control-Allow-Origin", "*");
 
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
@@ -62,3 +62,4 @@ public class SignUp extends HttpServlet {
     }
 
 }
+
